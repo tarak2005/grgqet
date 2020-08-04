@@ -26,23 +26,23 @@ function setup() {
 	
 	ground = new Ground(400,650,800,20)
 	
-	base=createSprite(600,630,200,20);
+	base=createSprite(600,640,200,20);
 	base.shapeColor=color(255);
 
-	side1=createSprite(490,560,20,160);
+	side1=createSprite(490,600,20,100);
 	side1.shapeColor=color(255);
 
-	side2=createSprite(710,560,20,160);
+	side2=createSprite(710,600,20,100);
 	side2.shapeColor=color(255);
 
-	base = Bodies.rectangle(600,630,200,20,{isStatic:true} );
-	World.add(world, base);
+	baseShadow = Bodies.rectangle(600,640,200,20,{isStatic:true} );
+	World.add(world, baseShadow);
  
-	side1 = Bodies.rectangle(490,560,20,160,{isStatic:true} );
-	World.add(world, side1);
+	shadow1= Bodies.rectangle(490,600,20,100,{isStatic:true} );
+	World.add(world, shadow1);
 
-	side2 = Bodies.rectangle(710,560,20,160,{isStatic:true} );
-	World.add(world, side2);
+	shadow2 = Bodies.rectangle(710,600,20,100,{isStatic:true} );
+	World.add(world, shadow2);
 }
 
 
@@ -58,7 +58,7 @@ function draw() {
 function keyPressed(){
 if (keyCode === UP_ARROW){
 
-Matter.Body.applyForce(ball1.body,ball1.body.position,{x:3,y:-10});
+Matter.Body.applyForce(ball1.body,ball1.body.position,{x:50,y:-60});
 
 }
 
